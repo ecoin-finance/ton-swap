@@ -1,0 +1,20 @@
+{
+  "name": "ston-test",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "vite": "^4.0.0",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "dependencies": {
+    "@ston-fi/sdk": "^2.0.0-rc.9",
+    "@ton/ton": "^15.1.0",
+    "axios": "^1.7.7",
+    "buffer": "^6.0.3"
+  }
+}
