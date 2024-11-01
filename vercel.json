@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "moduleResolution": {
+      "type": "node",
+      "alias": {
+        "@ton/ton": "node_modules/@ton/ton"
+      }
+    }
+  }
