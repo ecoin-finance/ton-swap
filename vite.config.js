@@ -8,7 +8,7 @@ export default defineConfig({
     'process.env': {}
   },
   optimizeDeps: {
-    include: ['axios', '@ton/ton'],
+    include: ['axios'],
   },
   plugins: [
     commonjs(),
@@ -16,7 +16,6 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['@ton/ton'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
