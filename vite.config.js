@@ -14,5 +14,16 @@ export default defineConfig({
     commonjs(),
     nodePolyfills()
   ],
-
+  build: {
+    rollupOptions: {
+      external: ['@ton/ton'],
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
+      }
+    }
+  }
 });
