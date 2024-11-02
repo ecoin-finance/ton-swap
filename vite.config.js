@@ -16,7 +16,6 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['@ston-fi/sdk'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
