@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ston-fi/sdk": "^2.0.0-rc.9",
+    "@ton/ton": "^15.1.0",
     "axios": "^1.7.7",
     "buffer": "^6.0.3"
   }
