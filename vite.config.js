@@ -7,12 +7,16 @@ export default defineConfig({
     'global': {},
     'process.env': {}
   },
+  optimizeDeps: {
+    include: ['axios', '@ston-fi/sdk'],
+  },
   plugins: [
     commonjs(),
     nodePolyfills()
   ],
   build: {
     rollupOptions: {
+      external: ['@ston-fi/sdk'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
