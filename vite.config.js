@@ -8,7 +8,7 @@ export default defineConfig({
     'process.env': {}
   },
   optimizeDeps: {
-    include: ['axios', '@ston-fi/sdk'],
+    include: ['axios', '@ton/ton'],
   },
   plugins: [
     commonjs(),
@@ -16,6 +16,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
+      external: ['https://cdn.jsdelivr.net/npm/@ton/ton@15.1.0/dist/index.js'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
