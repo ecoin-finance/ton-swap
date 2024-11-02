@@ -7,9 +7,6 @@ export default defineConfig({
     'global': {},
     'process.env': {}
   },
-  optimizeDeps: {
-    include: ['axios'],
-  },
   plugins: [
     commonjs(),
     nodePolyfills()
